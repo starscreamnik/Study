@@ -10,7 +10,7 @@ void consistentCalculations(const FullVector& a, const FullVector& b, const Full
 	cout << "Mixed Mult: " << a.mixedMult(b, c) << endl;
 }
 
-void parallelCalculations(/*FullVector& a, FullVector& b, FullVector& c*/) {
+void parallelCalculations(const FullVector& a, const FullVector& b, const FullVector& c) {
 	cout << "Cuda Scalar Mult: " << a.cuScalarMult(b) << endl;
 	cout << "Cuda Vector Mult: " << a.cuVectorMult(b) << endl;
 	cout << "Cuda Mixed Mult: " << a.cuMixedMult(b, c) << endl;
@@ -18,9 +18,12 @@ void parallelCalculations(/*FullVector& a, FullVector& b, FullVector& c*/) {
 
 int main() {
 	ifstream in("input.txt");
+	ofstream out("log.txt");
 	int veclen;
 	in >> veclen;
-	FullVector a(in, veclen), b(in, veclen), c(in, veclen);
+	FullVector a(in, out, veclen), b(in, out, veclen), c(in, out, veclen);
+	FullVector d = c;
+	c = c;
 
 	consistentCalculations(a, b, c);
 	parallelCalculations(a, b, c);

@@ -1,0 +1,15 @@
+constructor FullVector(ifstream& in, ofstream& logFile, int n). Received vector: 1 2 2 4 5 
+constructor FullVector(ifstream& in, ofstream& logFile, int n). Received vector: 6 1 1 1 2 
+constructor FullVector(ifstream& in, ofstream& logFile, int n). Received vector: 1 2 0 0 0 
+copy constructor. Received vector: 1 2 0 0 0 
+operator=
+Consistent Scalar Multiplication
+Consistent Vector Multiplication
+Consistent Mixed Multiplication
+Parallel Scalar Multiplication
+Parallel Vector Multiplication
+Parallel Mixed Multiplication
+destructor
+destructor
+destructor
+destructor

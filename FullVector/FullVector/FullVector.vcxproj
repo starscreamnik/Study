@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{EE5D5571-C92F-41B1-ABA4-C98382D3819F}</ProjectGuid>
+    <ProjectGuid>{BD43DF0D-C65B-4C22-9A8B-CBD9F7022B27}</ProjectGuid>
     <RootNamespace>FullVector</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -154,11 +154,13 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
     <CudaCompile Include="kernel.cu" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="fullvector.h" />
+  </ItemGroup>
+  <ItemGroup>
     <Text Include="input.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="fullvector.h" />
-    <ClInclude Include="kernel.cuh" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,2 +1,6 @@
-﻿MSVCRTD.lib(exe_main.obj) : error LNK2019: ссылка на неразрешенный внешний символ _main в функции "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\nikita tishakov\Documents\Visual Studio 2015\Projects\FullVector\Debug\FullVector.exe : fatal error LNK1120: неразрешенных внешних элементов: 1
+﻿  FullVector.vcxproj -> C:\Users\nikita tishakov\Documents\Visual Studio 2015\Projects\FullVector\Debug\FullVector.exe
+  FullVector.vcxproj -> C:\Users\nikita tishakov\Documents\Visual Studio 2015\Projects\FullVector\Debug\FullVector.pdb (Full PDB)
+  copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin\cudart*.dll" "C:\Users\nikita tishakov\Documents\Visual Studio 2015\Projects\FullVector\Debug\"
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin\cudart32_80.dll
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin\cudart64_80.dll
+  Скопировано файлов:         2.
