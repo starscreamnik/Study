@@ -10,7 +10,6 @@
 
 const int threadsPerBlock = 32;
 
-
 using namespace std;
 
 void errorHandler(cudaError_t error, const string& msg) {
@@ -146,11 +145,11 @@ __global__ void MxM_shared(int *m1, int *m2, int *ans, const int pitchM1, const 
 			__shared__ int bs[threadsPerBlock][threadsPerBlock];
 			as[ty][tx] = m1[ia + pitchM1 * ty + tx];				//read from dram to shared
 			bs[ty][tx] = m2[ib + pitchM2 * ty + tx];
-			__syncthreads();										// Synchronize to make sure the matrices are loaded
+			__syncthreads();							// Synchronize to make sure the matrices are loaded
 
 			for (int k = 0; k < threadsPerBlock; k++)				//solve
 				sum += as[ty][k] * bs[k][tx];
-			__syncthreads();										// Synchronize to make sure submatrices not needed
+			__syncthreads();							// Synchronize to make sure submatrices not needed
 		}
 
 		ans[n * threadsPerBlock * by + threadsPerBlock * bx + n * ty + tx] = sum;
@@ -286,7 +285,6 @@ int main() {
 
 	checkMxM(n, m1, m2, mAns);
 	cout << "shared memory: " << elapsed << endl;
-
 
 	cudaEventDestroy(mStart);
 	cudaEventDestroy(mStop);
