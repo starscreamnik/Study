@@ -136,9 +136,9 @@ __host__ void changeColorPPM(PPMImage *img){
 	if (img) {
 		for (int i = 0; i < img->x * img->y; i++) {
 			if (img->data[i].red + img->data[i].green + img->data[i].blue < NORMAL_LIGHTING) {
-				img->data[i].red = img->data[i].red + HIGH;
-				img->data[i].green = img->data[i].green + HIGH;
-				img->data[i].blue = img->data[i].blue + HIGH;
+				img->data[i].red += HIGH;
+				img->data[i].green += HIGH;
+				img->data[i].blue += HIGH;
 			}
 		}
 	}
