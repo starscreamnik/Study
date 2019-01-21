@@ -46,14 +46,14 @@ namespace lab
             // wl - write length, ws - write symbols, wa - write apart
             foreach (var line in res)
             {
-                var length = wl <= -1 || wl > line.Value.Length ? line.Value.Length : wl;
+                var length = wl <= -1 || wl > line.Value.Length ? line.Value.Length : wl; // --l option
 
-                if (line.Key == -1)
+                if (line.Key == -1) // offset is eof
                 {
                     Console.Write("EOF \t\t:");
                     for (var i = 0; i < length; i++)
                     {
-                        if (ws)
+                        if (ws)     // --a option
                         {
                             if (line.Value[i] > 33 && line.Value[i] < 127)
                                 Console.Write(line.Value[i]);
@@ -72,7 +72,7 @@ namespace lab
 
                 Console.Write("0x000{0:X} \t:", line.Key);
                 
-                if (wa)
+                if (wa)         // --y option
                 {
                     if (ws)                    
                         for (int i = 0, j = 1; j < length; i += 2, j += 2)
@@ -121,7 +121,6 @@ namespace lab
                 .Add("q|brief", v => showBrief = v!=null);
             parser.Parse(args);
 
-            //Reading from files
             using (var fs = new StreamReader(args[0]))
             { file1 = fs.ReadToEnd(); }
             using (var fs = new StreamReader(args[1]))
