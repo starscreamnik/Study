@@ -1,8 +1,0 @@
-C:\Users\Nikita\RiderProjects\Study\lab\lab\bin\Debug\lab.pdb
-C:\Users\Nikita\RiderProjects\Study\lab\lab\obj\Debug\lab.csprojResolveAssemblyReference.cache
-C:\Users\Nikita\RiderProjects\Study\lab\lab\obj\Debug\lab.exe
-C:\Users\Nikita\RiderProjects\Study\lab\lab\obj\Debug\lab.pdb
-C:\Users\Nikita\RiderProjects\Study\lab\lab\bin\Debug\NDesk.Options.dll
-C:\Users\Nikita\RiderProjects\Study\lab\lab\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Nikita\RiderProjects\Study\lab\lab\bin\Debug\Newtonsoft.Json.pdb
-C:\Users\Nikita\RiderProjects\Study\lab\lab\bin\Debug\Newtonsoft.Json.xml
