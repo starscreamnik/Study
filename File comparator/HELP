@@ -1,0 +1,10 @@
+This is JetBrains Rider C#.NET project. 
+Options:
+default - write different bits in hexadecimal. Example: 0x0F ( 0xAF ) 0xC3 ( 0xF1 )...
+--l|len=<VAL> - set length of output pairs of different bits
+--a|side-by-side - set formatting mode: write separately
+--s|text - set formatting mode: write symbols 
+--q|brief - set formatting mode: don't write different bits
+Required arguments - 2 input files (always after options). 
+
+Launch example: File_comparator.exe --text --a --l=3 input1.txt input2.txt
