@@ -1,0 +1,6 @@
+C:\Users\Nikita\RiderProjects\Study\File comparator\File comparator\bin\Debug\File_comparator.exe
+C:\Users\Nikita\RiderProjects\Study\File comparator\File comparator\bin\Debug\File_comparator.pdb
+C:\Users\Nikita\RiderProjects\Study\File comparator\File comparator\bin\Debug\NDesk.Options.dll
+C:\Users\Nikita\RiderProjects\Study\File comparator\File comparator\obj\Debug\File comparator.csprojResolveAssemblyReference.cache
+C:\Users\Nikita\RiderProjects\Study\File comparator\File comparator\obj\Debug\File_comparator.exe
+C:\Users\Nikita\RiderProjects\Study\File comparator\File comparator\obj\Debug\File_comparator.pdb
