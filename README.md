@@ -9,4 +9,4 @@ Currently the following projects are available:
 
 *Parallel lightening - My view on image processing in .ppm format using CUDA
 
-*lab - new C# work. Using NDesk.options 
+*File comparator - new C# work. I compare bitwise two files and output different bits. The output is formed from the parsing of optional parameters with the use of NDesk.options.
