@@ -1,5 +1,5 @@
 # Study
-My public repository which has developments in the C++ language.
+My public repository which has developments in the C++\C# language.
 
 Currently the following projects are available:
 
