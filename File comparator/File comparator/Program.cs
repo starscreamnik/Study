@@ -53,15 +53,26 @@ namespace File_comparator
             
             return result;
         }
-        
+
+        private static string MakeFormat(bool setSymbol, byte b)
+        {
+            var format = setSymbol ? "{0}" : " 0x{0:x2} ";
+            if (setSymbol)
+            {
+                char symbol = !Char.IsLetterOrDigit((char) b) ? '.' : (char) b;
+                return String.Format(format, symbol);
+            }
+            else
+            {
+                return String.Format(format, b);
+            }
+        }
+
         private static void PrintMismatches(List<KeyValuePair<int, List<byte>>> res, WOptions opts, int sl)
         {
             // sl - symbol length
             bool setSymbol = (opts & WOptions.Symbol) == WOptions.Symbol,
                  setApart = (opts & WOptions.Apart) == WOptions.Apart;
-            
-            var format = setSymbol ? "{0}" : " 0x{0:X} ";
-            var dot = setSymbol? '.'.ToString() : ((int)'.').ToString();
             
             foreach (var line in res)
             {
@@ -72,39 +83,28 @@ namespace File_comparator
                     Console.Write("EOF\t\t:");
                     
                     for (int i = 0; i < eofLen; i++)
-                    {
-                        var arg = setSymbol? Convert.ToChar(line.Value[i]).ToString() : line.Value[i].ToString();
-                        arg = line.Value[i] >= 33 && line.Value[i] < 127 ? arg : dot;                        
-                        Console.Write(format, arg);
-                    }
+                        Console.Write(MakeFormat(setSymbol, line.Value[i]));
                     break;
                 }
                 
-                // read offset only in Hex-type
+                // write offset only in Hex-type
                 Console.Write("0x{0:x8}\t:", line.Key);
 
-                // set output length not matching pairs
+                // set output length of not matching pairs
                 var length = sl * 2 <= -1 || sl * 2 > line.Value.Count ? line.Value.Count : sl * 2;
                 var inc = setApart ? 2 : 1;
                 
                 for (var i = 0; i < length; i += inc)
                 {
                     if(i%2 != 0) Console.Write('(');
-                    var arg = setSymbol? Convert.ToChar(line.Value[i]).ToString() : line.Value[i].ToString();
-                    arg = line.Value[i] >= 33 && line.Value[i] < 127 ? arg : dot;
-                    Console.Write(format, arg);
+                    Console.Write(MakeFormat(setSymbol, line.Value[i]));
                     if(i%2 != 0) Console.Write(')');
-
                     
                     if (i == length-2 && setApart)
                     {
                         Console.Write("|");
                         for (var j = 1; j < length; j += 2)
-                        {
-                            arg = setSymbol? Convert.ToChar(line.Value[j]).ToString() : line.Value[j].ToString();
-                            arg = line.Value[j] >= 33 && line.Value[j] < 127 ? arg : dot;
-                            Console.Write(format, arg);
-                        }
+                            Console.Write(MakeFormat(setSymbol, line.Value[j]));
                     }
                 }
                 Console.WriteLine();
