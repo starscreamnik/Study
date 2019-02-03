@@ -1,0 +1,5 @@
+C:\Users\Nikita\RiderProjects\Study\Geometric figures\Geometric figures\bin\Debug\Geometric_figures.exe
+C:\Users\Nikita\RiderProjects\Study\Geometric figures\Geometric figures\bin\Debug\Geometric_figures.pdb
+C:\Users\Nikita\RiderProjects\Study\Geometric figures\Geometric figures\obj\Debug\Geometric figures.csprojResolveAssemblyReference.cache
+C:\Users\Nikita\RiderProjects\Study\Geometric figures\Geometric figures\obj\Debug\Geometric_figures.exe
+C:\Users\Nikita\RiderProjects\Study\Geometric figures\Geometric figures\obj\Debug\Geometric_figures.pdb
