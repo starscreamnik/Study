@@ -83,7 +83,7 @@ namespace Geometric_figures
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("Geometry figures");
+            Console.WriteLine("Geometric figures");
             Run();
         }
     }
