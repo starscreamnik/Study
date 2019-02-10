@@ -62,10 +62,7 @@ namespace File_comparator
                 char symbol = !Char.IsLetterOrDigit((char) b) ? '.' : (char) b;
                 return String.Format(format, symbol);
             }
-            else
-            {
-                return String.Format(format, b);
-            }
+            return String.Format(format, b);
         }
 
         private static void PrintMismatches(List<KeyValuePair<int, List<byte>>> res, WOptions opts, int sl)
@@ -147,11 +144,8 @@ namespace File_comparator
             }
             
             //Reading from files
-            using (var fs = new StreamReader(files[0]))
-            { fileData1 = Encoding.ASCII.GetBytes(fs.ReadToEnd()); }
-
-            using (var fs = new StreamReader(files[1]))
-            { fileData2 = Encoding.ASCII.GetBytes(fs.ReadToEnd()); }
+            fileData1 = File.ReadAllBytes(files[0]);
+            fileData2 = File.ReadAllBytes(files[1]);
 
             Console.WriteLine("File comparison");          
             
