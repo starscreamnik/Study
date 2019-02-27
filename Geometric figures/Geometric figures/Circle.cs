@@ -4,22 +4,24 @@ namespace Geometric_figures
 {
     public class Circle : Shape
     {
+        public new string  Name;
+
         private readonly Point _center;
         private readonly double _radius;
-        public Circle(double x, double y, int radius)
+        public Circle(Point center, double radius):base("Circle")
         {
-            _center = new Point(x, y);
+            _center = center;
             _radius = radius;
         }
 
         public override double Area()
         {
-            return Math.Round(Math.PI * _radius * _radius, 3);
+            return Math.PI * _radius * _radius;
         }
 
         public override double Perimeter()
         {
-            return Math.Round(2 * Math.PI * _radius, 3);
+            return 2 * Math.PI * _radius;
         }
 
         public override Point Center()

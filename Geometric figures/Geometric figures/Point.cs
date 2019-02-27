@@ -1,3 +1,4 @@
+using System;
 namespace Geometric_figures
 {
     public struct Point
@@ -11,9 +12,9 @@ namespace Geometric_figures
             Y = y;
         }
 
-        public string GetString()
+        public string GetString(int precision = 3)
         {
-            return "x:"+X + ", y:" + Y;
+            return Math.Round(X, precision) + ";" + Math.Round(Y, precision);
         }
     }
 }

@@ -12,6 +12,7 @@
         <e p="LogInfo.cs" t="Include" />
         <e p="menu.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Point.cs" t="Include" />
         <e p="Polygon.cs" t="Include" />
         <e p="Program.cs" t="Include" />

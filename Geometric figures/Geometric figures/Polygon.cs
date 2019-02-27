@@ -6,19 +6,17 @@ namespace Geometric_figures
 {
     public class Polygon : Shape
     {
+        public new string Name = "Polygon";
+
         private readonly Point[] _points;
-        public Polygon(Point[] points)
+        public Polygon(Point[] points):base("Polygon")
         {
-            //if (points.Length < 3) ~Polygon();
             _points = new Point[points.Length];
             for(var i=0; i < points.Length; i++)
             {
                 _points[i] = points[i];
             }
         }
-
-        ~Polygon(){}
-
         public override double Area()
         {
             double res = 0;
@@ -30,7 +28,7 @@ namespace Geometric_figures
                 curr = next++;
             }
 
-            return Math.Round(0.5 * Math.Abs(res), 3);
+            return 0.5 * Math.Abs(res);
         }
 
         public override double Perimeter()
@@ -43,7 +41,7 @@ namespace Geometric_figures
                 curr = next++;
             }
 
-            return Math.Round(res, 3);
+            return res;
         }
 
         public override Point Center()
@@ -55,11 +53,10 @@ namespace Geometric_figures
                 xRes += GetEuclidMetric(_points[curr], _points[next]) * _points[curr].X;
                 yRes += GetEuclidMetric(_points[curr], _points[next]) * _points[curr].Y;
                 curr = next++;
-                next = next == _points.Length ? 0 : next;
-                
+                next = next == _points.Length ? 0 : next;                
             } while (curr != 0);
-            return new Point(Math.Round(xRes/Perimeter(), 2), 
-                             Math.Round(yRes/Perimeter(), 2));
+
+            return new Point(xRes/Perimeter(),yRes/Perimeter());
         }
     }
 }
