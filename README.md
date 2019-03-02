@@ -11,4 +11,4 @@ Currently the following projects are available:
 
 *File comparator - new C# work. I compare bitwise two files and output different bits. The output is formed from the parsing of optional parameters with the use of NDesk.options.
 
-*Geometric figures - mini C# work. Shape's classes with methods: Area, Perimeter and Center(Mass center). Also i have class Menu for user interaction and incomplete class LogInfo :)
+*Geometric figures - mini C# work. Shape's classes with methods: Area, Perimeter and Center(Mass center). Also i have class Menu for user interaction
