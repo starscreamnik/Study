@@ -1,0 +1,11 @@
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\bin\Debug\netcoreapp2.1\Ratio.deps.json
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\bin\Debug\netcoreapp2.1\Ratio.runtimeconfig.json
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\bin\Debug\netcoreapp2.1\Ratio.runtimeconfig.dev.json
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\bin\Debug\netcoreapp2.1\Ratio.dll
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\bin\Debug\netcoreapp2.1\Ratio.pdb
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\obj\Debug\netcoreapp2.1\Ratio.csprojAssemblyReference.cache
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\obj\Debug\netcoreapp2.1\Ratio.csproj.CoreCompileInputs.cache
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\obj\Debug\netcoreapp2.1\Ratio.AssemblyInfoInputs.cache
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\obj\Debug\netcoreapp2.1\Ratio.AssemblyInfo.cs
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\obj\Debug\netcoreapp2.1\Ratio.dll
+C:\Users\Nikita\RiderProjects\Study\Ratio\Ratio\obj\Debug\netcoreapp2.1\Ratio.pdb
