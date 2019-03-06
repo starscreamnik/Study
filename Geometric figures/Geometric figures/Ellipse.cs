@@ -18,7 +18,7 @@ namespace Geometric_figures
 
         public override double Area()
         {
-            return Math.Round(Math.PI * _a * _b, 3);
+            return Math.PI * _a * _b;
         }
 
         public override double Perimeter()
