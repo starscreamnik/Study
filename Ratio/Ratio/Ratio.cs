@@ -4,7 +4,6 @@ namespace Ratio
 {
     public class Ratio
     {
-        private const int NaN = 0;
         private const double Inf = 1e+15;
         public int Numer { get; }
         public int Denom { get; }
@@ -13,9 +12,9 @@ namespace Ratio
         {
             if (b == 0) 
                 throw new ArgumentException("Denominator is zero");
-            var nod = EuclidNod(a, b);
+            var nod = EuclidNod(Math.Abs(a), Math.Abs(b));
             Numer = a/nod;
-            Denom = b==0? b : a==0? 1 : b/nod;
+            Denom = b==0? b : a==0? 1 : Math.Abs(b)/nod;
         }
 
         private static int EuclidNod(int a, int b)
@@ -38,8 +37,6 @@ namespace Ratio
 
         public static Ratio operator +(Ratio n1, Ratio n2)
         {
-            if (n1.Denom == 0 || n2.Denom == 0)
-                throw new ArgumentException("Zero received");
             if (n1.Denom == n2.Denom)
                 return new Ratio(n1.Numer + n2.Numer, n1.Denom); // or n2.fraction
 
@@ -51,8 +48,6 @@ namespace Ratio
         }
         public static Ratio operator -(Ratio n1, Ratio n2)
         {
-            if (n1.Denom == 0 || n2.Denom == 0)
-                throw new ArgumentException("Zero received");
             if (n1.Denom == n2.Denom)
                 return new Ratio(n1.Numer - n2.Numer, n1.Denom); // or n2.fraction
 
@@ -64,16 +59,18 @@ namespace Ratio
         }
         public static Ratio operator *(Ratio n1, Ratio n2)
         {
-
-                if (n1.Denom == 0 || n2.Denom == 0)
-                    throw new ArgumentException("Divide by zero");
-                return new Ratio(n1.Numer * n2.Numer, n1.Denom * n2.Denom); // or n2.fraction
+            var nod1 = EuclidNod(Math.Abs(n1.Numer), n2.Denom);
+            var nod2 = EuclidNod(n1.Denom, Math.Abs(n2.Numer));
+            Console.WriteLine("{0} {1}", nod1, nod2);
+            return new Ratio((n1.Numer/nod1) * (n2.Numer/nod2), (n1.Denom/nod2) * (n2.Denom/nod1)); 
         }
         public static Ratio operator /(Ratio n1, Ratio n2)
         {
-            if (n1.Denom == 0 || n2.Numer == 0)
+            if (n2.Numer == 0)
                 throw new ArgumentException("Divide by zero");
-            return new Ratio(n1.Numer * n2.Denom, n1.Denom * n2.Numer);
+            var nod1 = EuclidNod(Math.Abs(n1.Numer), Math.Abs(n2.Numer));
+            var nod2 = EuclidNod(n1.Denom,n2.Denom);
+            return new Ratio((n1.Numer/nod1) * (n2.Denom/nod2), (n1.Denom/nod2) * (n2.Numer/nod1));
         }
 
         public static Ratio operator ++(Ratio n1)

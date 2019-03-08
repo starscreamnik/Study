@@ -35,7 +35,7 @@
           </e>
         </e>
         <e p="Ratio.Tests.csproj" t="IncludeRecursive" />
-        <e p="RatioService.cs" t="Include" />
+        <e p="UnitTest1.cs" t="Include" />
       </e>
     </e>
   </component>
