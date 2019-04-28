@@ -1,0 +1,11 @@
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\bin\Debug\netcoreapp2.1\BitContainer.deps.json
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\bin\Debug\netcoreapp2.1\BitContainer.runtimeconfig.json
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\bin\Debug\netcoreapp2.1\BitContainer.runtimeconfig.dev.json
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\bin\Debug\netcoreapp2.1\BitContainer.dll
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\bin\Debug\netcoreapp2.1\BitContainer.pdb
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\obj\Debug\netcoreapp2.1\BitContainer.csprojAssemblyReference.cache
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\obj\Debug\netcoreapp2.1\BitContainer.csproj.CoreCompileInputs.cache
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\obj\Debug\netcoreapp2.1\BitContainer.AssemblyInfoInputs.cache
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\obj\Debug\netcoreapp2.1\BitContainer.AssemblyInfo.cs
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\obj\Debug\netcoreapp2.1\BitContainer.dll
+C:\Users\Nikita\RiderProjects\Study\BitContainer\BitContainer\obj\Debug\netcoreapp2.1\BitContainer.pdb
