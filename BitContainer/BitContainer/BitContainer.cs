@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace BitContainer
 {
@@ -31,7 +32,7 @@ namespace BitContainer
         public void PushBit(int bit)
         {
             if (Length % 8 == 0) data.Add(0);    // push fictive value to list
-            this[Length] = bit == 1;
+            this[Length] = bit != 0;
             Length++;
         }
 
@@ -58,12 +59,9 @@ namespace BitContainer
                 if (Length % 8 == 0) data.Add(0);
 
                 for (var i = Length; i > place; i--)
-                {
                     this[i] = this[i - 1];
-                }
-
-                this[place] = bit == 1;
-
+                
+                this[place] = bit != 0;
                 Length++;
             }
             catch (IndexOutOfRangeException msg)
@@ -82,12 +80,9 @@ namespace BitContainer
                 if (Length % 8 == 0) data.Add(0);
 
                 for (var i = Length; i > place; i--)
-                {
                     this[i] = this[i - 1];
-                }
 
                 this[place] = bit;
-
                 Length++;
             }
             catch (IndexOutOfRangeException msg)
@@ -128,10 +123,12 @@ namespace BitContainer
                 yield return this[i];
         }
 
-        public string ToString(bool bit)
+        public override string ToString()
         {
-            return bit? "1" : "0";
+            var res = new StringBuilder();
+            foreach (var bit in MyEnumerator())
+                res.Append(bit?"1":"0");
+            return res.ToString();
         }
-        
     }
 }
