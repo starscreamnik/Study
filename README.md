@@ -18,3 +18,6 @@ Shape's classes with methods: Area, Perimeter and Center(Mass center). Also i ha
 
 *Ratio - My realization of rational fraction.
 I use unit testing with NUnit, this is debut. I think this skill will help me much more successfully in writing code more efficiently and faster.
+
+*BitContainer - class for a low memory using bits through a List<byte>. 
+Here, bit operations are implemented that provide access to a particular bit to get it\change it. There is index access and collection traversal.
