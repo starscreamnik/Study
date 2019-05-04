@@ -6,12 +6,12 @@ namespace ImageFilter
 {
     public class MatrixFilter
     {
-        private static int _radius; // R - radius
+        private static int _radius; 
         private readonly double[][] _data;
-        public MatrixFilter(int dim)
+        public MatrixFilter(int dim)    // this constructor is only for a GaussianBlur filter core
         {
-            var div = 0;
-            _radius = (dim - 1) / 2; // k = 2r+1
+            var div = 0;                // sum of all _data items
+            _radius = (dim - 1) / 2;    // k = 2r+1
             _data = new double[dim][];
             for (int i = 0, iVal = 1; i < dim; i++)
             {
