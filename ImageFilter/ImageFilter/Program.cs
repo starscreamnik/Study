@@ -8,7 +8,7 @@ namespace ImageFilter
     {    
         static void Main(string[] args)
         {
-            var filter1 = new MatrixFilter(3);
+            var filter1 = new MatrixFilter(5);
             Console.Write("Введите путь к изображению: ");
             var path = Console.ReadLine();
             var image = new Bitmap(path);
@@ -17,14 +17,14 @@ namespace ImageFilter
             var res1 = filter1.RunGaussianBlur(image, false);
             TimeSpan fin = DateTime.Now - start;
             Console.WriteLine("normal mode: time = {0}", fin.ToString());
-            res1.Save("normal.jpg");
+            res1.Save("normal.png", ImageFormat.Png);
 
             
             start = DateTime.Now;
             var res2 = filter1.RunGaussianBlur(image, true);
             fin = DateTime.Now - start;
             Console.WriteLine("unsafe mode: time = {0}", fin.ToString());
-            res2.Save("unsafe.jpg");
+            res2.Save("unsafe.png", ImageFormat.Png);
         }
     }
 }

@@ -6,19 +6,18 @@ namespace ImageFilter
 {
     public class MatrixFilter
     {
-        private static int _radius; 
-        private readonly double[][] _data;
-        public MatrixFilter(int dim)    // this constructor is only for a GaussianBlur filter core
+        private static int _radius; // R - radius
+        private readonly double[,] _data;
+        public MatrixFilter(int dim)
         {
-            var div = 0;                // sum of all _data items
-            _radius = (dim - 1) / 2;    // k = 2r+1
-            _data = new double[dim][];
+            var div = 0;
+            _radius = (dim - 1) / 2; // k = 2r+1
+            _data = new double[dim,dim];
             for (int i = 0, iVal = 1; i < dim; i++)
             {
-                _data[i] = new double[dim]; // new matrix row
                 for (int j = 0, jVal = iVal; j < dim; j++)
                 {
-                    _data[i][j] = jVal;
+                    _data[i,j] = jVal;
                     div += jVal;
 
                     if (j < dim / 2) jVal *= 2;
@@ -31,7 +30,7 @@ namespace ImageFilter
 
             for (int i = 0; i < dim; i++)
             for (int j = 0; j < dim; j++)
-                _data[i][j] /= div;
+                _data[i, j] /= div;
 
             Console.WriteLine("Matrix is completely created.");
         }
@@ -45,12 +44,12 @@ namespace ImageFilter
                
                 for (var j = x - _radius*bpp; j <= x + _radius*bpp; j+=bpp)
                 {
-                    var m = j < 0 ? 0 : j > widthInBytes - 3 ? widthInBytes - 3 : j; // m - byte column position                   
+                    var m = j < 0 ? 0 : j > widthInBytes - bpp ? widthInBytes - bpp : j; // m - byte column position                   
                     var pos = m + n * stride;    // byte position from first source image pixel
                     var pxl = Color.FromArgb(255,src[pos+2], src[pos+1], src[pos]);
-                    r += (byte) (pxl.R * _data[n - y + _radius][(m-x)/bpp + _radius]);
-                    g += (byte) (pxl.G * _data[n - y + _radius][(m-x)/bpp + _radius]);
-                    b += (byte) (pxl.B * _data[n - y + _radius][(m-x)/bpp + _radius]);
+                    r += (byte) (pxl.R * _data[i - y + _radius, (j-x)/bpp + _radius]);
+                    g += (byte) (pxl.G * _data[i - y + _radius, (j-x)/bpp + _radius]);
+                    b += (byte) (pxl.B * _data[i - y + _radius, (j-x)/bpp + _radius]);
                 }
             }
             outLine[x] = b;
@@ -104,9 +103,9 @@ namespace ImageFilter
                 {
                     var m = j < 0 ? 0 : j > image.Width - 1 ? image.Width - 1 : j;
                     var pxl = image.GetPixel(m, n);
-                    r += (byte) (pxl.R * _data[n - y + _radius][m - x + _radius]);
-                    g += (byte) (pxl.G * _data[n - y + _radius][m - x + _radius]);
-                    b += (byte) (pxl.B * _data[n - y + _radius][m - x + _radius]);
+                    r += (byte) (pxl.R * _data[i - y + _radius, j - x + _radius]);
+                    g += (byte) (pxl.G * _data[i - y + _radius, j - x + _radius]);
+                    b += (byte) (pxl.B * _data[i - y + _radius, j - x + _radius]);
                 }
             }
 
