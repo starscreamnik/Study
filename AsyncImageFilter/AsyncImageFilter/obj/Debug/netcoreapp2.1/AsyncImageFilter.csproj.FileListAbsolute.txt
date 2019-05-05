@@ -1,0 +1,11 @@
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\bin\Debug\netcoreapp2.1\AsyncImageFilter.deps.json
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\bin\Debug\netcoreapp2.1\AsyncImageFilter.runtimeconfig.json
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\bin\Debug\netcoreapp2.1\AsyncImageFilter.runtimeconfig.dev.json
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\bin\Debug\netcoreapp2.1\AsyncImageFilter.dll
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\bin\Debug\netcoreapp2.1\AsyncImageFilter.pdb
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\obj\Debug\netcoreapp2.1\AsyncImageFilter.csprojAssemblyReference.cache
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\obj\Debug\netcoreapp2.1\AsyncImageFilter.csproj.CoreCompileInputs.cache
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\obj\Debug\netcoreapp2.1\AsyncImageFilter.AssemblyInfoInputs.cache
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\obj\Debug\netcoreapp2.1\AsyncImageFilter.AssemblyInfo.cs
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\obj\Debug\netcoreapp2.1\AsyncImageFilter.dll
+C:\Users\Nikita\RiderProjects\Study\AsyncImageFilter\AsyncImageFilter\obj\Debug\netcoreapp2.1\AsyncImageFilter.pdb
