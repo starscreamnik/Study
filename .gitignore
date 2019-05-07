@@ -1,2 +1,4 @@
 
 FileComparator/
+*.exe
+*.dll
